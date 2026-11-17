@@ -1,0 +1,20 @@
+/*
+ * Entry stylesheet for consumers that already import Tailwind.
+ * Usage in an app stylesheet:
+ *   @import "tailwindcss";
+ *   @import "@expense-bot/ui/styles.css";
+ */
+@import "./theme.css";
+
+/* Let Tailwind scan this package's components for class names. */
+@source "../";
+
+/* Page defaults shared by every app (web and Keycloak theme). */
+@layer base {
+  html {
+    background-color: var(--color-surface-100);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    accent-color: var(--color-brand);
+  }
+}

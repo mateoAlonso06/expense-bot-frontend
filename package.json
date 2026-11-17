@@ -1,0 +1,17 @@
+{
+  "name": "expense-bot-front",
+  "private": true,
+  "packageManager": "pnpm@12.21.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @expense-bot/web dev",
+    "dev:theme": "pnpm --filter @expense-bot/keycloak-theme dev",
+    "storybook:theme": "pnpm --filter @expense-bot/keycloak-theme storybook",
+    "build": "pnpm -r build",
+    "build:theme": "pnpm --filter @expense-bot/keycloak-theme build-keycloak-theme",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck"
+  }
+}

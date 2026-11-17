@@ -1,0 +1,189 @@
+/*
+ * resiAI design tokens.
+ * Source of truth: packages/ui/design-system/tokens.json (keep both in sync).
+ *
+ * Declared with Tailwind v4 `@theme`, so each token is both a CSS variable
+ * (var(--color-brand)) and a utility (bg-brand, text-display-l, rounded-lg).
+ * Tailwind's default colors, fonts, text sizes, radii and shadows are reset,
+ * so only design-system values exist as utilities.
+ */
+@theme {
+  /* ---------- Color (light theme) ---------- */
+  --color-*: initial;
+
+  --color-surface-100: #f6f8f5; /* page background */
+  --color-surface-000: #ffffff; /* cards, bot bubbles */
+  --color-surface-200: #edf2ee; /* chat wall, input wells */
+  --color-surface-inverse: #0f1a14; /* contrast bands, dark button, device frame */
+
+  --color-ink: #0f1a14; /* headings and body text */
+  --color-ink-muted: #3d4b44; /* paragraphs, descriptions */
+  --color-ink-subtle: #4a5a52; /* labels, captions, metadata */
+  --color-ink-inverse: #ffffff; /* text on surface-inverse */
+  --color-ink-inverse-muted: #c9d6ce; /* body text on surface-inverse */
+
+  --color-border: #dce5df;
+  --color-border-strong: #b7c4bc;
+
+  --color-brand: #0a7d48; /* primary actions, links, checks, progress */
+  --color-brand-strong: #065c34; /* hover/pressed, text on brand-tint */
+  --color-brand-tint: #ddf5e8; /* icon tiles, success badges */
+  --color-on-brand: #ffffff; /* text on brand */
+  --color-mint: #7cf0b4; /* only on surface-inverse, never text on light */
+  --color-bubble-user: #d6f5e3;
+
+  /* Decorative only: hero glows and banknote motif */
+  --color-sky: #d7ecfa;
+  --color-lilac: #f1ecfb;
+  --color-banknote-ink: #6fa8d2;
+  --color-sun-gold: #e2b65c;
+
+  /* Categories: always use the -bg / -fg pair together */
+  --color-cat-food-bg: #fff1de;
+  --color-cat-food-fg: #8a4b00;
+  --color-cat-transport-bg: #e2ecff;
+  --color-cat-transport-fg: #1d4fb8;
+  --color-cat-services-bg: #e6f4f7;
+  --color-cat-services-fg: #0e6377;
+  --color-cat-leisure-bg: #f1e9fe;
+  --color-cat-leisure-fg: #6233b5;
+  --color-cat-health-bg: #fde8ec;
+  --color-cat-health-fg: #a3223f;
+  --color-cat-housing-bg: #ddf5e8;
+  --color-cat-housing-fg: #065c34;
+  --color-cat-other-bg: #eef1ef;
+  --color-cat-other-fg: #3d4b44;
+
+  /* ---------- Fonts (loaded by each app, e.g. next/font) ---------- */
+  --font-*: initial;
+  --font-display: "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ---------- Type scale: text-<name> sets size, leading, tracking, weight ---------- */
+  --text-*: initial;
+
+  --text-display-xl: 4.25rem; /* 68px, hero only; 44px on small screens */
+  --text-display-xl--line-height: 1.02;
+  --text-display-xl--letter-spacing: -0.02em;
+  --text-display-xl--font-weight: 800;
+
+  --text-display-l: 3rem; /* 48px, section titles; 34px on small screens */
+  --text-display-l--line-height: 1.08;
+  --text-display-l--letter-spacing: -0.02em;
+  --text-display-l--font-weight: 800;
+
+  --text-display-m: 1.875rem; /* 30px */
+  --text-display-m--line-height: 1.15;
+  --text-display-m--letter-spacing: -0.02em;
+  --text-display-m--font-weight: 800;
+
+  --text-title: 1.5rem; /* 24px */
+  --text-title--line-height: 1.25;
+  --text-title--letter-spacing: -0.02em;
+  --text-title--font-weight: 700;
+
+  --text-amount: 1.75rem; /* 28px, money in expense cards */
+  --text-amount--line-height: 1.1;
+  --text-amount--letter-spacing: -0.02em;
+  --text-amount--font-weight: 800;
+
+  --text-body-l: 1.25rem; /* 20px */
+  --text-body-l--line-height: 1.55;
+
+  --text-body: 1rem; /* 16px */
+  --text-body--line-height: 1.6;
+
+  --text-chat: 0.9375rem; /* 15px */
+  --text-chat--line-height: 1.4;
+
+  --text-label: 0.875rem; /* 14px */
+  --text-label--line-height: 1.4;
+  --text-label--font-weight: 600;
+
+  --text-eyebrow: 0.875rem; /* 14px, pair with `uppercase` */
+  --text-eyebrow--line-height: 1.4;
+  --text-eyebrow--letter-spacing: 0.08em;
+  --text-eyebrow--font-weight: 600;
+
+  --text-caption: 0.75rem; /* 12px */
+  --text-caption--line-height: 1.4;
+  --text-caption--font-weight: 600;
+
+  /*
+   * Spacing: Tailwind's default 4px step already matches the tokens,
+   * so space-N in tokens.json is p-N / gap-N here (space-6 = 24px = p-6).
+   */
+
+  /* ---------- Radius ---------- */
+  --radius-*: initial;
+  --radius-sm: 0.75rem; /* 12px, small tiles */
+  --radius-md: 1.125rem; /* 18px, chat bubbles, icon tiles */
+  --radius-lg: 1.5rem; /* 24px, step cards, dashboard tiles */
+  --radius-xl: 1.75rem; /* 28px, feature cards */
+  --radius-2xl: 2.25rem; /* 36px, CTA band */
+  --radius-pill: 999px; /* buttons, chips, progress bars */
+
+  /* ---------- Shadow ---------- */
+  --shadow-*: initial;
+  --shadow-bubble: 0 1px 2px rgb(15 26 20 / 0.06);
+  --shadow-device: 0 40px 80px -30px rgb(15 26 20 / 0.45);
+}
+
+/*
+ * Dark theme: derived from the landing's dark band, not reviewed as a full design yet.
+ * Opt-in only, with data-theme="dark" on <html>. It does not follow the OS setting
+ * until the design is reviewed; then add a prefers-color-scheme rule here.
+ * Only the colors change, so the light block above stays the single source of utilities.
+ */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@layer theme {
+  :root {
+    color-scheme: light;
+  }
+
+  [data-theme="dark"] {
+    color-scheme: dark;
+
+    --color-surface-100: #0f1a14;
+    --color-surface-000: #16231c;
+    --color-surface-200: #1c2b23;
+    --color-surface-inverse: #e8f2ec;
+
+    --color-ink: #eef5f0;
+    --color-ink-muted: #b5c4bb;
+    --color-ink-subtle: #93a49a;
+    --color-ink-inverse: #0f1a14;
+    --color-ink-inverse-muted: #3d4b44;
+
+    --color-border: #2a3a31;
+    --color-border-strong: #40544a;
+
+    --color-brand: #3dd68c;
+    --color-brand-strong: #7cf0b4;
+    --color-brand-tint: #163d2a;
+    --color-on-brand: #0f1a14;
+    --color-bubble-user: #1e4a33;
+
+    --color-sky: #12283a;
+    --color-lilac: #241d38;
+    --color-banknote-ink: #4f86b0;
+    --color-sun-gold: #c99a3e;
+
+    --color-cat-food-bg: #3a2a12;
+    --color-cat-food-fg: #f5c27a;
+    --color-cat-transport-bg: #16264a;
+    --color-cat-transport-fg: #9dbafa;
+    --color-cat-services-bg: #123138;
+    --color-cat-services-fg: #8ed3e2;
+    --color-cat-leisure-bg: #2a1d45;
+    --color-cat-leisure-fg: #c9b2f7;
+    --color-cat-health-bg: #3f1820;
+    --color-cat-health-fg: #f4a3b4;
+    --color-cat-housing-bg: #163d2a;
+    --color-cat-housing-fg: #7cf0b4;
+    --color-cat-other-bg: #23302a;
+    --color-cat-other-fg: #c2cec7;
+  }
+}
