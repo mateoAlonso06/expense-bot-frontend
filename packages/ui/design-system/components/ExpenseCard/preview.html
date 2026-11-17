@@ -1,0 +1,35 @@
+<!-- @dsCard group="Chat" height=300 subtitle="Chat reply and panel row" -->
+<style>
+.stage{display:flex;flex-wrap:wrap;gap:var(--space-5);align-items:flex-start;padding:var(--space-5);background:var(--surface-200);font-family:var(--font-sans);color:var(--ink)}
+.card{width:300px;background:var(--surface-000);border-radius:18px 18px 18px 4px;box-shadow:var(--shadow-bubble);padding:14px;display:flex;flex-direction:column;gap:10px}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--brand)}
+.amount{font-family:var(--font-display);font-size:28px;line-height:1.1;font-weight:800;letter-spacing:-0.02em}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12px;font-weight:600;padding:4px 10px;border-radius:var(--radius-pill)}
+.food{background:var(--cat-food-bg);color:var(--cat-food-fg)}
+.neutral{background:var(--cat-other-bg);color:var(--cat-other-fg);font-weight:500}
+.desc{font-size:14px;color:var(--ink-muted)}
+.list{width:340px;background:var(--surface-000);border-radius:var(--radius-lg);padding:8px 20px}
+.r{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--border)}
+.r:last-child{border-bottom:0}
+.tile{width:36px;height:36px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.t-food{background:var(--cat-food-bg);color:var(--cat-food-fg)}
+.t-tr{background:var(--cat-transport-bg);color:var(--cat-transport-fg)}
+.meta{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.meta b{font-size:14px;font-weight:500}
+.meta span{font-size:12px;color:var(--ink-subtle)}
+.amt{font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+</style>
+<div class="stage">
+  <div class="card">
+    <span class="status"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"></path></svg>Leí tu ticket</span>
+    <span class="amount">$ 23.890,00</span>
+    <div class="chips"><span class="chip food">Alimentación</span><span class="chip neutral">Hoy</span></div>
+    <span class="desc">Compra en supermercado</span>
+  </div>
+  <div class="list">
+    <div class="r"><span class="tile t-food">IMG</span><div class="meta"><b>Compra en supermercado</b><span>Alimentación · Hoy</span></div><span class="amt">$ 23.890</span></div>
+    <div class="r"><span class="tile t-tr">TXT</span><div class="meta"><b>Viaje en Uber al centro</b><span>Transporte · Hoy</span></div><span class="amt">$ 3.200</span></div>
+  </div>
+</div>
+<script></script>

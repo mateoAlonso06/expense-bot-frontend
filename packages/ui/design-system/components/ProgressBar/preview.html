@@ -1,0 +1,27 @@
+<!-- @dsCard group="Data display" height=230 subtitle="Monthly limit and category share" -->
+<style>
+.stage{display:flex;flex-wrap:wrap;gap:var(--space-4);padding:var(--space-5);background:var(--surface-100);font-family:var(--font-sans);color:var(--ink)}
+.tile{flex:1 1 240px;background:var(--surface-000);border-radius:var(--radius-lg);padding:20px;display:flex;flex-direction:column;gap:6px}
+.lbl{font-size:13px;color:var(--ink-subtle)}
+.big{font-family:var(--font-display);font-size:32px;font-weight:800;letter-spacing:-0.02em}
+.track{height:8px;background:var(--surface-200);border-radius:var(--radius-pill);overflow:hidden;margin-top:6px}
+.fill{height:100%;border-radius:var(--radius-pill);background:var(--brand)}
+.cat{display:flex;flex-direction:column;gap:5px;margin-top:6px}
+.cat .top{display:flex;justify-content:space-between;font-size:13px}
+.cat .top span:last-child{color:var(--ink-subtle);font-variant-numeric:tabular-nums}
+.t6{height:6px;background:var(--cat-other-bg);border-radius:var(--radius-pill)}
+</style>
+<div class="stage">
+  <div class="tile">
+    <span class="lbl">Gastado este mes</span>
+    <span class="big">$ 412.380</span>
+    <span class="lbl">de un límite de $ 550.000</span>
+    <div class="track" role="progressbar" aria-label="Límite mensual" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><div class="fill" style="width:75%"></div></div>
+  </div>
+  <div class="tile">
+    <span class="lbl">Por categoría</span>
+    <div class="cat"><div class="top"><span>Alimentación</span><span>$ 168.200</span></div><div class="t6"><div class="fill" style="width:82%;background:var(--cat-food-fg)"></div></div></div>
+    <div class="cat"><div class="top"><span>Transporte</span><span>$ 64.500</span></div><div class="t6"><div class="fill" style="width:32%;background:var(--cat-transport-fg)"></div></div></div>
+  </div>
+</div>
+<script></script>

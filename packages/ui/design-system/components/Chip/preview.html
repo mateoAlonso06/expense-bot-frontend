@@ -1,0 +1,33 @@
+<!-- @dsCard group="Data display" height=120 subtitle="Categories, neutral, status" -->
+<style>
+.wrap{display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-6);background:var(--surface-100);font-family:var(--font-sans)}
+.row{display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.chip{font-size:12px;font-weight:600;line-height:1.4;padding:4px 10px;border-radius:var(--radius-pill)}
+.food{background:var(--cat-food-bg);color:var(--cat-food-fg)}
+.housing{background:var(--cat-housing-bg);color:var(--cat-housing-fg)}
+.transport{background:var(--cat-transport-bg);color:var(--cat-transport-fg)}
+.health{background:var(--cat-health-bg);color:var(--cat-health-fg)}
+.leisure{background:var(--cat-leisure-bg);color:var(--cat-leisure-fg)}
+.services{background:var(--cat-services-bg);color:var(--cat-services-fg)}
+.other{background:var(--cat-other-bg);color:var(--cat-other-fg)}
+.neutral{background:var(--cat-other-bg);color:var(--cat-other-fg);font-weight:500}
+.ok{background:var(--brand-tint);color:var(--brand-strong);font-size:13px;padding:5px 12px}
+.new{background:var(--brand);color:var(--on-brand)}
+</style>
+<div class="wrap">
+  <div class="row">
+    <span class="chip food">Alimentación</span>
+    <span class="chip housing">Vivienda</span>
+    <span class="chip transport">Transporte</span>
+    <span class="chip health">Salud</span>
+    <span class="chip leisure">Ocio</span>
+    <span class="chip services">Servicios</span>
+    <span class="chip other">Otros</span>
+  </div>
+  <div class="row">
+    <span class="chip neutral">Hoy</span>
+    <span class="chip ok">Disponible</span>
+    <span class="chip new">Nuevo</span>
+  </div>
+</div>
+<script></script>

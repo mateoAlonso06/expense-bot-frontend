@@ -1,0 +1,19 @@
+<!-- @dsCard group="Chat" height=220 subtitle="User, working, reply" -->
+<style>
+.wall{display:flex;flex-direction:column;gap:var(--space-3);padding:var(--space-5);background:var(--surface-200);font-family:var(--font-sans);max-width:380px}
+.b{font-size:15px;line-height:1.4;padding:10px 14px;color:var(--ink)}
+.user{align-self:flex-end;max-width:80%;background:var(--bubble-user);border-radius:18px 18px 4px 18px}
+.bot{align-self:flex-start;max-width:86%;background:var(--surface-000);border-radius:18px 18px 18px 4px;box-shadow:var(--shadow-bubble)}
+.work{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-muted)}
+.dots{display:flex;gap:4px}
+.dots span{width:7px;height:7px;border-radius:50%;background:var(--brand);animation:d 1s infinite}
+.dots span:nth-child(2){animation-delay:.15s}.dots span:nth-child(3){animation-delay:.3s}
+@keyframes d{0%,80%,100%{opacity:.25}40%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.dots span{animation:none;opacity:.7}}
+</style>
+<div class="wall">
+  <div class="b user">uber al centro 3200</div>
+  <div class="b bot work"><span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>Interpretando el mensaje…</div>
+  <div class="b bot">Listo. ¿Querés que te avise cuando llegues al 80% de tu límite de Transporte?</div>
+</div>
+<script></script>

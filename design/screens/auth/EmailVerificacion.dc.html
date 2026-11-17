@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Email: confirmá tu email</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#EDF2EE}
+a{color:#0A7D48}a:hover{color:#065C34}
+</style>
+</helmet>
+<div style="width: 640px; height: 760px; box-sizing: border-box; background: #EDF2EE; padding: 40px 20px; font-family: Inter, Arial, sans-serif; color: #0F1A14; display: flex; flex-direction: column; align-items: center; gap: 24px">
+<span style="font-family: 'Plus Jakarta Sans', Arial, sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.02em">resi<span style="color: #0A7D48">AI</span></span>
+
+<div style="width: 560px; box-sizing: border-box; background: #FFFFFF; border-radius: 24px; padding: 44px 44px 40px; display: flex; flex-direction: column; gap: 22px">
+<span style="align-self: flex-start; background: #DDF5E8; color: #065C34; font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 999px">Un paso más</span>
+<h1 style="margin: 0; font-family: 'Plus Jakarta Sans', Arial, sans-serif; font-size: 30px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em">Confirmá tu email</h1>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4B44">Hola Juana, gracias por crear tu cuenta en resiAI. Confirmá que este email es tuyo y después vinculá Telegram para empezar a anotar gastos.</p>
+<a href="#" style="align-self: flex-start; display: inline-block; background: #0A7D48; color: #FFFFFF; font-size: 16px; font-weight: 600; text-decoration: none; padding: 16px 32px; border-radius: 999px">Confirmar email</a>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #4A5A52">El link vence en [TIEMPO]. Si el botón no funciona, copiá esta dirección en tu navegador:</p>
+<p style="margin: 0; background: #F6F8F5; border-radius: 12px; padding: 12px 14px; font-family: ui-monospace, Menlo, monospace; font-size: 12px; line-height: 1.5; color: #3D4B44; word-break: break-all">https://[DOMINIO]/realms/[REALM]/login-actions/action-token?key=…</p>
+</div>
+
+<div style="width: 560px; display: flex; flex-direction: column; gap: 6px; text-align: center; font-size: 12px; line-height: 1.6; color: #4A5A52">
+<span>Si no creaste una cuenta en resiAI, ignorá este mail. No vamos a hacer nada con tu dirección.</span>
+<span>resiAI · Gastos por chat, con inteligencia artificial.</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":640,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
