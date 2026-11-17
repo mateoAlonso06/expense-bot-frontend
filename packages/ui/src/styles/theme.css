@@ -133,6 +133,20 @@
   --shadow-*: initial;
   --shadow-bubble: 0 1px 2px rgb(15 26 20 / 0.06);
   --shadow-device: 0 40px 80px -30px rgb(15 26 20 / 0.45);
+
+  /* ---------- Motion ---------- */
+  --animate-typing-dot: typing-dot 1s infinite; /* resiAI "working" bubble dots */
+
+  @keyframes typing-dot {
+    0%,
+    80%,
+    100% {
+      opacity: 0.25;
+    }
+    40% {
+      opacity: 1;
+    }
+  }
 }
 
 /*

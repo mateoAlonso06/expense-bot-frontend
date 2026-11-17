@@ -11,6 +11,17 @@ export type CategoryKey =
   | "services"
   | "other";
 
+/** Display names of the seeded categories (user-facing, Spanish). */
+export const CATEGORY_LABELS: Record<CategoryKey, string> = {
+  food: "Alimentación",
+  housing: "Vivienda",
+  transport: "Transporte",
+  health: "Salud",
+  leisure: "Ocio",
+  services: "Servicios",
+  other: "Otros",
+};
+
 export type ChipVariant = CategoryKey | "neutral" | "status" | "new";
 
 const variantClasses: Record<ChipVariant, string> = {
