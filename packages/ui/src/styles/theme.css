@@ -54,10 +54,15 @@
   --color-cat-other-bg: #eef1ef;
   --color-cat-other-fg: #3d4b44;
 
-  /* ---------- Fonts (loaded by each app, e.g. next/font) ---------- */
+  /*
+   * ---------- Fonts ----------
+   * Each app loads the files: apps/web through next/font (--font-inter,
+   * --font-jakarta on <html>), apps/keycloak-theme through @fontsource-variable,
+   * whose family names are the var() fallbacks.
+   */
   --font-*: initial;
-  --font-display: "Plus Jakarta Sans", Inter, system-ui, sans-serif;
-  --font-sans: Inter, system-ui, sans-serif;
+  --font-display: var(--font-jakarta, "Plus Jakarta Sans Variable"), system-ui, sans-serif;
+  --font-sans: var(--font-inter, "Inter Variable"), system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* ---------- Type scale: text-<name> sets size, leading, tracking, weight ---------- */

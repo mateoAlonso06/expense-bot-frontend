@@ -1,6 +1,9 @@
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 import { KcPage } from "./kc.gen";
+// Self-hosted variable fonts: the login pages make no requests to Google.
+import "@fontsource-variable/inter";
+import "@fontsource-variable/plus-jakarta-sans";
 import "./index.css";
 
 // The following block can be uncommented to test a specific page with `pnpm dev`
